@@ -1,0 +1,63 @@
+@startuml
+!define WIDTH 300000
+!define HEIGHT 600
+
+skinparam usecase {
+    BackgroundColor #f0f0f0
+    BorderColor black
+    FontSize 10
+    RoundCorner 19
+}
+
+skinparam actor {
+    FontSize 14
+}
+
+scale 1.5
+
+actor "Employé" as Admin
+
+rectangle " " {
+
+    usecase "Se connecter" as Login
+
+    usecase "Visualisation Dashboard" as VD
+    usecase "Gérer son profil" as GES
+
+    usecase "Gérer ses congés/absences" as GCA
+    usecase "Consulter ses notifications" as GSS
+    usecase "Visualisation l'organegramme" as GDP
+    usecase "Gérer ses tâches" as GM
+    usecase "Consulter ses documents administratifs" as GS
+
+usecase "Vérification de l'authentification" as AuthCheck
+
+
+}
+
+left to right direction
+
+Admin --> GES
+Admin --> GSS
+Admin --> GM
+Admin --> GS
+Admin --> VD
+Admin --> GDP
+Admin --> GCA
+Admin --> Login
+
+
+
+GCA ..> AuthCheck : <<include>>
+GS ..> AuthCheck : <<include>>
+GM ..> AuthCheck : <<include>>
+GSS ..> AuthCheck : <<include>>
+GES ..> AuthCheck : <<include>>
+VD ..> AuthCheck : <<include>>
+GDP ..> AuthCheck : <<include>>
+Login ..> AuthCheck : <<include>>
+
+
+
+
+@enduml

@@ -1,0 +1,16 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/catalogue/Produit.xml"/>
+        <include file="classpath:db/migration/changelog/catalogue/CategorieProduit.xml"/>
+        <include file="classpath:db/migration/changelog/input/EntreeStockDetail.xml"/>
+        <include file="classpath:db/migration/changelog/input/EntreeStock.xml"/>
+        <include file="classpath:db/migration/changelog/agent/Fournisseur.xml"/>
+        <include file="classpath:db/migration/changelog/output/SortieStock.xml"/>
+        <include file="classpath:db/migration/changelog/output/SortieStockDetail.xml"/>
+        <include file="classpath:db/migration/changelog/store/Stock.xml"/>
+        <include file="classpath:db/migration/changelog/store/Magasin.xml"/>
+
+</databaseChangeLog>

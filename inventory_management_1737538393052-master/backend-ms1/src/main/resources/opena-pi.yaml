@@ -1,0 +1,744 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /produits:
+    get:
+      summary: List all produits
+      operationId: listProduits
+      tags:
+        - produits
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of produits
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Produits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a produit
+      operationId: createProduits
+      tags:
+        - produits
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /produits/{produitId}:
+    get:
+      summary: Info for a specific produit
+      operationId: showProduitById
+      tags:
+        - produits
+      parameters:
+        - name: produitId
+          in: path
+          required: true
+          description: The id of the produit to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Produits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieProduits:
+    get:
+      summary: List all categorieProduits
+      operationId: listCategorieProduits
+      tags:
+        - categorieProduits
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of categorieProduits
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/CategorieProduits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a categorieProduit
+      operationId: createCategorieProduits
+      tags:
+        - categorieProduits
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieProduits/{categorieProduitId}:
+    get:
+      summary: Info for a specific categorieProduit
+      operationId: showCategorieProduitById
+      tags:
+        - categorieProduits
+      parameters:
+        - name: categorieProduitId
+          in: path
+          required: true
+          description: The id of the categorieProduit to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/CategorieProduits'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entreeStockDetails:
+    get:
+      summary: List all entreeStockDetails
+      operationId: listEntreeStockDetails
+      tags:
+        - entreeStockDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of entreeStockDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EntreeStockDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a entreeStockDetail
+      operationId: createEntreeStockDetails
+      tags:
+        - entreeStockDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entreeStockDetails/{entreeStockDetailId}:
+    get:
+      summary: Info for a specific entreeStockDetail
+      operationId: showEntreeStockDetailById
+      tags:
+        - entreeStockDetails
+      parameters:
+        - name: entreeStockDetailId
+          in: path
+          required: true
+          description: The id of the entreeStockDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EntreeStockDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entreeStocks:
+    get:
+      summary: List all entreeStocks
+      operationId: listEntreeStocks
+      tags:
+        - entreeStocks
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of entreeStocks
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/EntreeStocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a entreeStock
+      operationId: createEntreeStocks
+      tags:
+        - entreeStocks
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /entreeStocks/{entreeStockId}:
+    get:
+      summary: Info for a specific entreeStock
+      operationId: showEntreeStockById
+      tags:
+        - entreeStocks
+      parameters:
+        - name: entreeStockId
+          in: path
+          required: true
+          description: The id of the entreeStock to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/EntreeStocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /fournisseurs:
+    get:
+      summary: List all fournisseurs
+      operationId: listFournisseurs
+      tags:
+        - fournisseurs
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of fournisseurs
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Fournisseurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a fournisseur
+      operationId: createFournisseurs
+      tags:
+        - fournisseurs
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /fournisseurs/{fournisseurId}:
+    get:
+      summary: Info for a specific fournisseur
+      operationId: showFournisseurById
+      tags:
+        - fournisseurs
+      parameters:
+        - name: fournisseurId
+          in: path
+          required: true
+          description: The id of the fournisseur to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Fournisseurs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /sortieStocks:
+    get:
+      summary: List all sortieStocks
+      operationId: listSortieStocks
+      tags:
+        - sortieStocks
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of sortieStocks
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/SortieStocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a sortieStock
+      operationId: createSortieStocks
+      tags:
+        - sortieStocks
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /sortieStocks/{sortieStockId}:
+    get:
+      summary: Info for a specific sortieStock
+      operationId: showSortieStockById
+      tags:
+        - sortieStocks
+      parameters:
+        - name: sortieStockId
+          in: path
+          required: true
+          description: The id of the sortieStock to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/SortieStocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /sortieStockDetails:
+    get:
+      summary: List all sortieStockDetails
+      operationId: listSortieStockDetails
+      tags:
+        - sortieStockDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of sortieStockDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/SortieStockDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a sortieStockDetail
+      operationId: createSortieStockDetails
+      tags:
+        - sortieStockDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /sortieStockDetails/{sortieStockDetailId}:
+    get:
+      summary: Info for a specific sortieStockDetail
+      operationId: showSortieStockDetailById
+      tags:
+        - sortieStockDetails
+      parameters:
+        - name: sortieStockDetailId
+          in: path
+          required: true
+          description: The id of the sortieStockDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/SortieStockDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /stocks:
+    get:
+      summary: List all stocks
+      operationId: listStocks
+      tags:
+        - stocks
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of stocks
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Stocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a stock
+      operationId: createStocks
+      tags:
+        - stocks
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /stocks/{stockId}:
+    get:
+      summary: Info for a specific stock
+      operationId: showStockById
+      tags:
+        - stocks
+      parameters:
+        - name: stockId
+          in: path
+          required: true
+          description: The id of the stock to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Stocks'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /magasins:
+    get:
+      summary: List all magasins
+      operationId: listMagasins
+      tags:
+        - magasins
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of magasins
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Magasins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a magasin
+      operationId: createMagasins
+      tags:
+        - magasins
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /magasins/{magasinId}:
+    get:
+      summary: Info for a specific magasin
+      operationId: showMagasinById
+      tags:
+        - magasins
+      parameters:
+        - name: magasinId
+          in: path
+          required: true
+          description: The id of the magasin to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Magasins'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  Produit:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - prixUnitaire
+      - description
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      prixUnitaire:
+        type: number
+      description:
+        type: string
+  Produits:
+    type: array
+    items:
+      $ref: '#/definitions/Produit'
+  CategorieProduit:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - description
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      description:
+        type: string
+  CategorieProduits:
+    type: array
+    items:
+      $ref: '#/definitions/CategorieProduit'
+  EntreeStockDetail:
+    type: "object"
+    required:
+      - id
+      - prix
+      - quantite
+      - description
+    properties:
+      id:
+        type: int
+      prix:
+        type: number
+      quantite:
+        type: number
+      description:
+        type: string
+  EntreeStockDetails:
+    type: array
+    items:
+      $ref: '#/definitions/EntreeStockDetail'
+  EntreeStock:
+    type: "object"
+    required:
+      - id
+      - code
+      - dateEntree
+      - description
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      dateEntree:
+        type: date
+      description:
+        type: string
+  EntreeStocks:
+    type: array
+    items:
+      $ref: '#/definitions/EntreeStock'
+  Fournisseur:
+    type: "object"
+    required:
+      - id
+      - code
+      - label
+      - adresse
+      - email
+      - description
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      label:
+        type: string
+      adresse:
+        type: string
+      email:
+        type: string
+      description:
+        type: string
+  Fournisseurs:
+    type: array
+    items:
+      $ref: '#/definitions/Fournisseur'
+  SortieStock:
+    type: "object"
+    required:
+      - id
+      - dateSortie
+      - description
+      - code
+    properties:
+      id:
+        type: int
+      dateSortie:
+        type: date
+      description:
+        type: string
+      code:
+        type: string
+  SortieStocks:
+    type: array
+    items:
+      $ref: '#/definitions/SortieStock'
+  SortieStockDetail:
+    type: "object"
+    required:
+      - id
+      - prix
+      - quantite
+      - description
+    properties:
+      id:
+        type: int
+      prix:
+        type: number
+      quantite:
+        type: number
+      description:
+        type: string
+  SortieStockDetails:
+    type: array
+    items:
+      $ref: '#/definitions/SortieStockDetail'
+  Stock:
+    type: "object"
+    required:
+      - id
+      - quantite
+      - quantiteDeffecteuse
+    properties:
+      id:
+        type: int
+      quantite:
+        type: number
+      quantiteDeffecteuse:
+        type: number
+  Stocks:
+    type: array
+    items:
+      $ref: '#/definitions/Stock'
+  Magasin:
+    type: "object"
+    required:
+      - id
+      - adresse
+      - code
+      - label
+      - description
+    properties:
+      id:
+        type: int
+      adresse:
+        type: string
+      code:
+        type: string
+      label:
+        type: string
+      description:
+        type: string
+  Magasins:
+    type: array
+    items:
+      $ref: '#/definitions/Magasin'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

@@ -1,0 +1,51 @@
+@startuml
+actor Administrateur
+participant "UI" as UI
+participant "Controller" as Controller
+participant "Service" as Service
+participant "Repository" as Repository
+
+== Valider Commande ==
+Administrateur -> UI : Consulte commandes en attente
+UI -> Controller : /api/commandes?statut=EN_ATTENTE
+Controller -> Service : getCommandesEnAttente()
+Service -> Repository : findByStatut()
+Repository --> Service : List<Commande>
+Service --> Controller : List<CommandeDTO>
+Controller --> UI : Liste commandes
+UI --> Administrateur : Affiche commandes
+
+Administrateur -> UI : Sélectionne commande à valider
+UI -> Controller : /api/commandes/{id}/valider
+Controller -> Service : validerCommande()
+Service -> Service : *auditerCharges()*
+Service -> Repository : updateStatut()
+Service -> Service : genererNotification("Validation")
+Service -> Service : updateStock()
+Service --> Controller : Confirmation
+Controller --> UI : Succès
+UI --> Administrateur : Affiche confirmation
+
+== Gérer les Charges ==
+Administrateur -> UI : Demande rapport charges
+UI -> Controller : /api/rapports/charges
+Controller -> Service : genererRapportCharges()
+Service -> Repository : getCommandesCompletees()
+Repository --> Service : List<Commande>
+Service -> Service : *calculerTotaux()*
+Service --> Controller : RapportChargesDTO
+Controller --> UI : Rapport PDF/Excel
+UI --> Administrateur : Téléchargement fichier
+
+== Audit des Stocks ==
+Administrateur -> UI : Lance audit
+UI -> Controller : /api/stocks/audit
+Controller -> Service : lancerAudit()
+Service -> Repository : findAllStocks()
+Repository --> Service : List<Stock>
+Service -> Service : *verifierSeuils()*
+Service -> Service : *identifierAnomalies()*
+Service --> Controller : AuditResultatDTO
+Controller --> UI : Rapport d'audit
+UI --> Administrateur : Visualisation résultats
+@enduml
