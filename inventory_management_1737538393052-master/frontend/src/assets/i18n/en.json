@@ -1,0 +1,268 @@
+{
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "new" : "New",
+    "search": "Search",
+    "export": "Export",
+    "validate": "Validate",
+    "search": "Seach...",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "next": "Next",
+    "yes": "Yes",
+    "no": "No",
+    "actions": "Actions",
+    "confirm": "Confirm",
+    "creation": "Creation",
+    "list": "List",
+	"actionPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "actionPermission": "Action permission",
+        "tabPan": "Action permission",
+        "header": "Liste des action permissions",
+        "deleteActionPermissionConfirmationMessage": "Are you sure you want to delete action permission",
+        "deleteActionPermissionsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "modelPermissionUser":{
+        "actionPermission": "Action permission",
+        "actionPermissionPlaceHolder": "Select a Action permission",
+        "actionPermissionPlaceHolderFilter": "Search by Action permission",
+        "modelPermission": "Model permission",
+        "modelPermissionPlaceHolder": "Select a Model permission",
+        "modelPermissionPlaceHolderFilter": "Search by Model permission",
+        "value": "Value",
+        "user": "User",
+        "userPlaceHolder": "Select a User",
+        "userPlaceHolderFilter": "Search by User",
+        "subAttribute": "Sub attribute",
+        "modelPermissionUser": "Model permission user",
+        "tabPan": "Model permission user",
+        "header": "Liste des model permission users",
+        "deleteModelPermissionUserConfirmationMessage": "Are you sure you want to delete model permission user",
+        "deleteModelPermissionUsersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+    "role":{
+        "authority": "Authority",
+        "role": "Role",
+        "tabPan": "Role",
+        "header": "Liste des roles",
+        "deleteRoleConfirmationMessage": "Are you sure you want to delete role",
+        "deleteRolesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+
+    "roleUser":{
+        "role": "Role",
+        "rolePlaceHolder": "Select a Role",
+        "rolePlaceHolderFilter": "Search by Role",
+        "user": "User",
+        "userPlaceHolder": "Select a User",
+        "userPlaceHolderFilter": "Search by User",
+        "roleUser": "Role user",
+        "tabPan": "Role user",
+        "header": "Liste des role users",
+        "deleteRoleUserConfirmationMessage": "Are you sure you want to delete role user",
+        "deleteRoleUsersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "user":{
+        "credentialsNonExpired": "Credentials non expired",
+        "enabled": "Enabled",
+        "email": "Email",
+        "accountNonExpired": "Account non expired",
+        "accountNonLocked": "Account non locked",
+        "username": "Username",
+        "password": "Password",
+        "passwordChanged": "Password changed",
+        "modelPermissionUsers": "Model permission users",
+        "roleUsers": "Role users",
+        "RoleUsersPlaceHolder": "Select multiple Roles",
+        "user": "User",
+        "tabPan": "User",
+        "header": "Liste des users",
+        "deleteUserConfirmationMessage": "Are you sure you want to delete user",
+        "deleteUsersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "modelPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "modelPermission": "Model permission",
+        "tabPan": "Model permission",
+        "header": "Liste des model permissions",
+        "deleteModelPermissionConfirmationMessage": "Are you sure you want to delete model permission",
+        "deleteModelPermissionsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+
+    "produit":{
+        "code": "Code",
+        "label": "Label",
+        "prixUnitaire": "Prix unitaire",
+        "prixUnitaireMin": "Prix unitaire Min",
+        "prixUnitaireMax": "Prix unitaire Max",
+        "categorieProduit": "Categorie produit",
+        "categorieProduitPlaceHolder": "Select a Categorie produit",
+        "categorieProduitPlaceHolderFilter": "Search by Categorie produit",
+        "description": "Description",
+        "produit": "Produit",
+        "tabPan": "Produit",
+        "header": "Liste des produits",
+        "deleteProduitConfirmationMessage": "Are you sure you want to delete produit",
+        "deleteProduitsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "categorieProduit":{
+        "code": "Code",
+        "label": "Label",
+        "description": "Description",
+        "categorieProduit": "Categorie produit",
+        "tabPan": "Categorie produit",
+        "header": "Liste des categorie produits",
+        "deleteCategorieProduitConfirmationMessage": "Are you sure you want to delete categorie produit",
+        "deleteCategorieProduitsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "entreeStockDetail":{
+        "entreeStock": "Entree stock",
+        "entreeStockPlaceHolder": "Select a Entree stock",
+        "entreeStockPlaceHolderFilter": "Search by Entree stock",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "prix": "Prix",
+        "prixMin": "Prix Min",
+        "prixMax": "Prix Max",
+        "quantite": "Quantite",
+        "quantiteMin": "Quantite Min",
+        "quantiteMax": "Quantite Max",
+        "magazin": "Magazin",
+        "magazinPlaceHolder": "Select a Magazin",
+        "magazinPlaceHolderFilter": "Search by Magazin",
+        "description": "Description",
+        "entreeStockDetail": "Entree stock detail",
+        "tabPan": "Entree stock detail",
+        "header": "Liste des entree stock details",
+        "deleteEntreeStockDetailConfirmationMessage": "Are you sure you want to delete entree stock detail",
+        "deleteEntreeStockDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "entreeStock":{
+        "code": "Code",
+        "dateEntree": "Date entree",
+        "dateEntreeMin": "Date entree Min",
+        "dateEntreeMax": "Date entree Max",
+        "description": "Description",
+        "fournisseur": "Fournisseur",
+        "fournisseurPlaceHolder": "Select a Fournisseur",
+        "fournisseurPlaceHolderFilter": "Search by Fournisseur",
+        "entreeStockDetails": "Entree stock details",
+        "entreeStock": "Entree stock",
+        "tabPan": "Entree stock",
+        "header": "Liste des entree stocks",
+        "deleteEntreeStockConfirmationMessage": "Are you sure you want to delete entree stock",
+        "deleteEntreeStocksConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "fournisseur":{
+        "code": "Code",
+        "label": "Label",
+        "adresse": "Adresse",
+        "email": "Email",
+        "description": "Description",
+        "fournisseur": "Fournisseur",
+        "tabPan": "Fournisseur",
+        "header": "Liste des fournisseurs",
+        "deleteFournisseurConfirmationMessage": "Are you sure you want to delete fournisseur",
+        "deleteFournisseursConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "sortieStock":{
+        "dateSortie": "Date sortie",
+        "dateSortieMin": "Date sortie Min",
+        "dateSortieMax": "Date sortie Max",
+        "description": "Description",
+        "code": "Code",
+        "sortieStockDetails": "Sortie stock details",
+        "sortieStock": "Sortie stock",
+        "tabPan": "Sortie stock",
+        "header": "Liste des sortie stocks",
+        "deleteSortieStockConfirmationMessage": "Are you sure you want to delete sortie stock",
+        "deleteSortieStocksConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "sortieStockDetail":{
+        "sortieStock": "Sortie stock",
+        "sortieStockPlaceHolder": "Select a Sortie stock",
+        "sortieStockPlaceHolderFilter": "Search by Sortie stock",
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "prix": "Prix",
+        "prixMin": "Prix Min",
+        "prixMax": "Prix Max",
+        "quantite": "Quantite",
+        "quantiteMin": "Quantite Min",
+        "quantiteMax": "Quantite Max",
+        "magazin": "Magazin",
+        "magazinPlaceHolder": "Select a Magazin",
+        "magazinPlaceHolderFilter": "Search by Magazin",
+        "description": "Description",
+        "sortieStockDetail": "Sortie stock detail",
+        "tabPan": "Sortie stock detail",
+        "header": "Liste des sortie stock details",
+        "deleteSortieStockDetailConfirmationMessage": "Are you sure you want to delete sortie stock detail",
+        "deleteSortieStockDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "stock":{
+        "produit": "Produit",
+        "produitPlaceHolder": "Select a Produit",
+        "produitPlaceHolderFilter": "Search by Produit",
+        "magazin": "Magazin",
+        "magazinPlaceHolder": "Select a Magazin",
+        "magazinPlaceHolderFilter": "Search by Magazin",
+        "quantite": "Quantite",
+        "quantiteMin": "Quantite Min",
+        "quantiteMax": "Quantite Max",
+        "quantiteDeffecteuse": "Quantite deffecteuse",
+        "quantiteDeffecteuseMin": "Quantite deffecteuse Min",
+        "quantiteDeffecteuseMax": "Quantite deffecteuse Max",
+        "stock": "Stock",
+        "tabPan": "Stock",
+        "header": "Liste des stocks",
+        "deleteStockConfirmationMessage": "Are you sure you want to delete stock",
+        "deleteStocksConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "magasin":{
+        "adresse": "Adresse",
+        "code": "Code",
+        "label": "Label",
+        "description": "Description",
+        "magasin": "Magasin",
+        "tabPan": "Magasin",
+        "header": "Liste des magasins",
+        "deleteMagasinConfirmationMessage": "Are you sure you want to delete magasin",
+        "deleteMagasinsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+

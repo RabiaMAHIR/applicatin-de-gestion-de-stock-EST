@@ -1,0 +1,160 @@
+.grid {
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 18px;
+
+
+}
+.display-change-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.display-change {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+
+
+.colored-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display-change-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.display-change {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+.colored-card {
+    position: relative;
+}
+
+.card {
+    flex: 1;
+    min-width: 160px;
+    min-height: 230px;
+    height: 430px;
+    background-color: #ffffff;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+}
+
+
+.card.card2 {
+    flex: 1;
+    min-width: 360px;
+}
+
+
+
+.small-card {
+    min-height: 250px;
+    padding: 15px;
+    position: relative;
+
+}
+
+
+
+
+.colored-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+    height: 120px;
+    position: relative;
+
+}
+
+.colored-card {
+    flex: 1;
+    padding: 15px;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #000000;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.traffic { background-color:  #a1d6ff;}
+.users { background-color:  rgba(138, 225, 74, 0.72); }
+.sales { background-color: #bdbdac;}
+.performance { background-color: rgba(195, 109, 109, 0.89);  }
+
+h5 {
+    color: #ffffff;
+    position: relative;
+    top: -35px;
+    margin-right: 120px;
+    margin-bottom: 5px;
+    text-shadow: -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+span{
+    color: rgb(255, 255, 255);
+    position: static;
+    margin-right: 140px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 17px;
+    text-shadow: -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+
+.colored-card:hover {
+    transform: scale(1.1);
+
+}
+
+
+
+h5, span {
+    margin: 0;
+}
+
+i {
+    font-size: 2rem;
+    margin-left: auto;
+}

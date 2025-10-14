@@ -1,0 +1,150 @@
+.body{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.Title{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Fira Code", monospace;
+    text-align: center;
+    color: #000000;
+}
+
+.infos{
+    margin-top: 1rem;
+}
+
+.data{
+    padding-top: 1rem;
+    color: #000000;
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.info-icon img{
+    width: 60px;
+    height: 60px;
+}
+
+.forms{
+    margin-top: -1rem;
+    margin-left: 100px;
+}
+
+.form{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px;
+}
+
+.form input{
+    position: absolute;
+    width: 70%;
+    height: 4rem;
+    outline: none;
+    font-size: 1em;
+    padding-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+
+}
+
+.form textarea{
+    position: absolute;
+    width: 70%;
+    outline: none;
+    font-size: 1em;
+    padding-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+
+.form label{
+    position: absolute;
+    font-size: 1.1rem;
+    color : #000000;
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s ease;
+}
+
+.form input:focus,
+.form input:valid {
+    color: #000000;
+    border: 1px solid #000000;
+    font-size: 20px;
+    padding: 0 25px;
+    height: 4rem;
+}
+.form input:focus + .lab,
+.form input:valid + .lab{
+    color: #000000;
+    height: 1px;
+    line-height: 1px;
+    transform: translate (-15px, -20px) scale(1);
+    z-index: 1111;
+}
+
+.form textarea:focus,
+.form textarea:valid {
+    color: #000000;
+    border: 1px solid #000000;
+    font-size: 20px;
+}
+.form textarea:focus + .lab,
+.form textarea:valid + .lab{
+    color: #070000;
+    height: 1px;
+    line-height: 1px;
+    transform: translate (-15px, -20px) scale(1);
+    z-index: 1111;
+}
+
+.msg{
+    height: 130px;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    width: 20%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Fira Code", monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #000000;
+    cursor: pointer;
+    margin-left: 50%;
+    color: #ffffff;
+}
+
+button img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.cont{
+    margin-left: 15rem;
+}

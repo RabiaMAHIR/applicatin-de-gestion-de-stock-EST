@@ -1,0 +1,135 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'entreeStock.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'entreeStock.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'entreeStock.code' | translate}}<span style="color: red;">*</span></label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'entreeStock.code' | translate}}" id="1" [(ngModel)]="item.code"
+                                                   [ngClass]="{'ng-invalid ng-dirty' : !validEntreeStockCode}"  />
+                                            <small class='p-error' *ngIf='!validEntreeStockCode'>Code est obligatoire.</small>
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'entreeStock.dateEntree' | translate}}</label>
+                                            <p-calendar appendTo="body" id="2"  [showTime]="true" [showSeconds]="false" placeholder="{{'entreeStock.dateEntree' | translate}}"  [(ngModel)]="item.dateEntree"
+                                                        dateFormat="{{dateFormat}}"  >
+                                            </p-calendar>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'entreeStock.description' | translate}}</label>
+                                            <textarea id="3" pInputTextarea rows="5" cols="30" placeholder="{{'entreeStock.description' | translate}}"  [(ngModel)]="item.description"
+                                                       ></textarea>
+                                            
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="4">{{'entreeStock.fournisseur' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="fournisseurs" [(ngModel)]="item.fournisseur" id="4" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="label" placeholder="{{'entreeStock.fournisseur' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+                            <p-tabPanel header="{{'entreeStock.entreeStockDetails' | translate}}">
+                                <p-tabView [(activeIndex)]="activeTab">
+                                    <p-tabPanel header="Création">
+                                            <div class="grid">
+                                                            <div class="field col-11 md:col-6">
+                                                                <label>Produit</label>
+                                                                <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="entreeStockDetailsElement.produit"
+                                                                             id="2"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="label"
+                                                                             placeholder="Produit"  >
+                                                                </p-dropdown>
+                                                                
+                                                            </div>
+
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="3">Prix</label>
+                                                                <p-inputNumber class="mb-2 mr-2" id="prix" placeholder="Prix"  [(ngModel)]="entreeStockDetailsElement.prix"></p-inputNumber>
+                                                                
+                                                            </div>
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="4">Quantite</label>
+                                                                <p-inputNumber class="mb-2 mr-2" id="quantite" placeholder="Quantite"  [(ngModel)]="entreeStockDetailsElement.quantite"></p-inputNumber>
+                                                                
+                                                            </div>
+                                                            <div class="field col-11 md:col-6">
+                                                                <label>Magazin</label>
+                                                                <p-dropdown  appendTo="body"  [options]="magazins" [(ngModel)]="entreeStockDetailsElement.magazin"
+                                                                             id="5"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="label"
+                                                                             placeholder="Magazin"  >
+                                                                </p-dropdown>
+                                                                
+                                                            </div>
+
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="6">{{'entreeStockDetail.description' | translate}}</label>
+                                                                <textarea id="6" pInputTextarea rows="5" cols="30" placeholder="{{'entreeStockDetail.description' | translate}}"  [(ngModel)]="entreeStockDetailsElement.description"
+                                                                           ></textarea>
+                                                                
+                                                            </div>
+                                                <div class="field col-12 md:col-1">
+                                                    <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addEntreeStockDetails()"></button>
+                                                </div>
+
+                                            </div>
+                                    </p-tabPanel>
+                                    <p-tabPanel header="Liste {{item.entreeStockDetails?.length > 0 ? '(' + item.entreeStockDetails?.length + ')' : ''}}">
+                                            <div class="card">
+                                                <p-table [value]="item.entreeStockDetails" [scrollable]="true" scrollHeight="200px">
+                                                    <ng-template pTemplate="header">
+                                                        <tr>
+                                                                        <th>Produit</th>
+                                                                        <th>Prix</th>
+                                                                        <th>Quantite</th>
+                                                                        <th>Magazin</th>
+                                                                        <th>Description</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </ng-template>
+                                                    <ng-template pTemplate="body" let-p let-i="rowIndex">
+                                                        <tr>
+                                                                    <td>{{p.produit?.label}}</td>
+                                                                        <td>{{p.prix}}</td>
+                                                                        <td>{{p.quantite}}</td>
+                                                                    <td>{{p.magazin?.label}}</td>
+                                                                        <td>{{p.description}}</td>
+                                                            <td>
+                                                                <button (click)="deleteEntreeStockDetails(p,i)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                <button (click)="editEntreeStockDetails(p,i)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                            </td>
+                                                        </tr>
+                                                    </ng-template>
+                                                </p-table>
+                                            </div>
+
+                                    </p-tabPanel>
+                                </p-tabView>
+                            </p-tabPanel>
+
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

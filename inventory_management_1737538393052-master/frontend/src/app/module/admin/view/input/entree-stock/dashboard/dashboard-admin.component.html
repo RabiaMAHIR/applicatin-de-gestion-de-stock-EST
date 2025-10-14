@@ -1,0 +1,92 @@
+<div class="colored-cards">
+    <div class="colored-card traffic">
+        <h5>total Entree</h5>
+        <span class="h2 font-weight-bold">{{ totalEntree }} DMA</span>
+        <i class="pi pi-angle-double-down" style="font-size: 2.2rem; margin-top: 9px;color: black;border-radius: 16px"></i>
+        <div class="display-change-container">
+            <span class="display-change">{{ displayChange }} %</span>
+            <svg *ngIf="displayChange > 0" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 17 9 11 15 17 21 11"></polyline>
+            </svg>
+
+            <svg *ngIf="displayChange < 0" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 7 9 13 15 7 21 13"></polyline>
+            </svg>
+        </div>
+    </div>
+    <div class="colored-card users">
+        <h5>total Sortie</h5>
+        <span class="h2 font-weight-bold">{{ totalSortie }}  DMA</span>
+        <i class="pi pi-angle-double-up"  style="font-size: 2.2rem; margin-top: 9px;color: black;border-radius: 16px"></i>
+        <div class="display-change-container">
+            <span class="display-change">{{ sortiedisplayChange }} %</span>
+            <svg *ngIf="sortiedisplayChange > 0" width="25" height="25"  viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 17 9 11 15 17 21 11"></polyline>
+            </svg>
+
+            <svg *ngIf="sortiedisplayChange < 0" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 7 9 13 15 7 21 13"></polyline>
+            </svg>
+        </div>
+
+    </div>
+    <div class="colored-card sales">
+        <h5>total Fournisseur</h5>
+        <span class="h2 font-weight-bold">{{ totalFournisseurs }}</span>
+        <i class="pi pi-users" style="font-size: 2.2rem; margin-top: 9px;color: black;border-radius: 16px"></i>
+    </div>
+    <div class="colored-card performance">
+        <h5>total Magasin</h5>
+        <span class="h2 font-weight-bold">{{ totalMagasin }}</span>
+        <i class="pi pi-building" style="font-size: 2.2rem; margin-top: 9px;color: black;border-radius: 16px"></i>
+
+    </div>
+</div>
+
+
+<div class="grid">
+    <div class="card" style="border-width:0.5px;border-color:#020000;">
+        <p-chart class="cale" type="line" [data]="data2" [options]="options2"></p-chart>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="card" style="background-color: aliceblue; border-width:0.5px;border-color:#020000;">
+        <div class="card1 flex justify-content-center">
+            <p-calendar
+                [(ngModel)]="date"
+                (ngModelChange)="onDateChange()"
+                view="year"
+                dateFormat="yy"
+                [showIcon]="true"
+                inputId="buttondisplay"
+                [showOnFocus]="false"
+                style="width: 180px; margin-left: auto;"/>
+
+        </div>
+
+        <p-chart class="cale" type="bar" [data]="data" [options]="options"></p-chart>
+
+
+    </div>
+    <div class="card " style="background-color: #fffcf0; border-width:0.5px;border-color:#020000;">
+
+
+        <div class=" card1 flex-1 mr-2" style="width: 180px; margin-left: 0px;">
+            <p-dropdown
+                [options]="magasins"
+                [(ngModel)]="selectedMagasin"
+                (ngModelChange)="onSelectionChange()"
+                placeholder="Select Magasin">
+            </p-dropdown>
+        </div>
+        <p-chart type="polarArea" [data]="data1" [options]="options1"></p-chart>
+
+    </div>
+
+</div>
+
+
+
+
+

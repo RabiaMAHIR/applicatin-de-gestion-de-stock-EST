@@ -1,0 +1,85 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="grid" *ngIf="listActionIsValid">
+            <div class="col-12">
+                <p-toast></p-toast>
+                <div class="card">
+                    <div class="flex mt-4">
+                        <div class="flex-1 mr-2">
+                            <p-dropdown [options]="produits" [(ngModel)]="selectedProduit" (ngModelChange)="onSelectionChange()" placeholder="Select produit"></p-dropdown>
+                        </div>
+                        <div class="flex-1 mr-2">
+                            <p-dropdown [options]="magasins" [(ngModel)]="selectedMagasin" (ngModelChange)="onSelectionChange()" placeholder="Select Magasin"></p-dropdown>
+                        </div>
+                        <div class="flex-1">
+                            <p-dropdown [options]="calculationMethods" [(ngModel)]="selectedCalculationMethod" placeholder="Select Calculation Method"></p-dropdown>
+                        </div>
+                        <div class="flex-1">
+                            <p-button label="Confirm" (click)="confirmAction()"></p-button>
+                        </div>
+                    </div>
+
+                    <div class="mt-6"></div>
+                    <div class="mt-6"></div>
+
+                    <div class="flex">
+                        <div class="flex-1 mr-2">
+                            <h5>Entree Stock Details</h5>
+                            <p-table [value]="filteredEntreeStockItems" [paginator]="true" [rows]="10">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th>Magasin</th>
+                                        <th>Prix</th>
+                                        <th>Quantity</th>
+<!--                                        <th>Description</th>-->
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-item>
+                                    <tr>
+                                        <td>{{ item.produit?.label }}</td>
+                                        <td>{{ item.magazin?.label }}</td>
+                                        <td>{{ item.prix }}</td>
+                                        <td>{{ item.quantite }}</td>
+<!--                                        <td>{{ item.description }}</td>-->
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                        <div class="mt-6"></div>
+
+                        <div class="flex-1">
+                            <h5>Sortie Stock Details</h5>
+                            <p-table [value]="filteredSortieStockItems" [paginator]="true" [rows]="10">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th>Magasin</th>
+                                        <th>Quantity</th>
+                                        <th>Prix</th>
+                                        <th> totalCost </th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-item>
+                                    <tr>
+                                        <td>{{ item.produit?.label }}</td>
+                                        <td>{{ item.magazin?.label }}</td>
+                                        <td>{{ item.quantite }}</td>
+                                        <td>{{ item.prix | number:'1.2-2' }}</td>
+                                        <td>{{ item.prix*item.quantite | number:'1.2-2' }}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+
+                    <div class="mt-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <p-card header="Permission not allowed" *ngIf="!listActionIsValid">
+            <p class="m-0">You don't have permission to access!</p>
+        </p-card>
+    </div>
+</div>

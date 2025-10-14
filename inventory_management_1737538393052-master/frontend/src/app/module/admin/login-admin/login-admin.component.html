@@ -1,0 +1,45 @@
+
+<body>
+<div class="toogle-left">
+    <button class="back" [routerLink]="['/home']"><span><i class="pi pi-home"></i></span>Go Home</button>
+    <br>
+    <div class="icon">
+        <img src="assets/layout/login/undraw_login_re_4vu2.svg">
+    </div>
+
+</div>
+<div class="container">
+    <div class="side-section">
+
+    </div>
+
+    <div class="login-section">
+        <form class="login-form" (ngSubmit)="submit()">
+            <h1>Se Connecter</h1>
+
+            <div class="form-group">
+                <input id="username" type="text" [(ngModel)]="loginDto.username" name="username" required>
+                <label for="username">Utilisateur</label>
+            </div>
+
+            <div class="form-group">
+                <input id="password" type="password" [(ngModel)]="loginDto.password" name="password" required>
+                <label for="password">Mot de passe</label>
+            </div>
+
+            <a  class="forgot-password" (click)="forget()">Mot de passe oublié?</a>
+
+            <button type="submit" class="btn btn-primary">
+                Se Connecter
+            </button>
+
+            <button type="button" class="btn btn-secondary" (click)="register()">
+                <i class="fas fa-user"></i>Créer un compte
+            </button>
+        </form>
+    </div>
+
+
+</div>
+
+</body>

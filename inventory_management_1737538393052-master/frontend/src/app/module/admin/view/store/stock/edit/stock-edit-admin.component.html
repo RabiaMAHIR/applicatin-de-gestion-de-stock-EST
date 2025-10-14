@@ -1,0 +1,56 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'stock.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'stock.tabPan' | translate}}">
+                        <div class="grid">
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="1">{{'stock.produit' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="produits" [(ngModel)]="item.produit" id="1" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="label" placeholder="{{'stock.produit' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="2">{{'stock.magazin' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="magazins" [(ngModel)]="item.magazin" id="2" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="label" placeholder="{{'stock.magazin' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'stock.quantite' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="3" placeholder="{{'stock.quantite' | translate}}" [(ngModel)]="item.quantite"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="4">{{'stock.quantiteDeffecteuse' | translate}}</label>
+                                            <p-inputNumber class="mb-2 mr-2" id="4" placeholder="{{'stock.quantiteDeffecteuse' | translate}}" [(ngModel)]="item.quantiteDeffecteuse"  >
+                                            </p-inputNumber>
+                                            
+                                        </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>
