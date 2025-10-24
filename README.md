@@ -1,9 +1,9 @@
 <h1 style="text-align:center; font-size:32px; color:#6c757d;">
-Application de Gestion de Stock – EST Taroudant
+Application de Gestion de Stock – EST Sidi Bennour
 </h1>
 
 <h3 style="text-align:center; color:#a0a0a0;">
-Projet réalisé dans le cadre de l’École Nationale Supérieure de l’Intelligence Artificielle et des Sciences des Données – Taroudant
+Projet réalisé dans le cadre de L'Ecole Supérieure de Technologie - Sidi Bennour (ESTSB) 
 </h3>
 
 ---
@@ -16,7 +16,7 @@ Elle permet de centraliser les informations, d’éviter les erreurs humaines et
 Ce projet a été conçu selon une approche moderne combinant :
 - **Back-End** avec *Spring Boot*
 - **Front-End** avec *Angular*
-- **Base de données** relationnelle (ex. MySQL)
+- **Base de données** relationnelle (MySQL)
 - **Architecture en couches (3-tier architecture)**
 - **Modèle MVC (Modèle–Vue–Contrôleur)**  
 
