@@ -120,7 +120,7 @@ Il permet de comprendre comment les messages sont échangés et comment les opé
 
 ### 📦 2. Diagramme de Séquence : Création d’une Entrée de Stock
 
-![Création d’une Entrée de Stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20S%C3%A9quence.png)
+![Création d’une Entrée de Stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20S%C3%A9quence2.png)
 
 #### Acteurs impliqués :
 - **ADMIN** : saisit les informations d’entrée.  
