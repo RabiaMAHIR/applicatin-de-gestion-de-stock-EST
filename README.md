@@ -57,7 +57,6 @@ Dans notre projet, les contrôleurs **Spring Boot** exposent des **API REST** co
 
 ## 🧩 3. Diagramme de classes (Class Diagram)
 
-![Diagramme de classes](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Menu%20de%20Navigation%20.png)
 
 ![Diagramme de classes](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Le%20diagramme%20de%20classes%20(Class%20Diagram)%20.png)
 
