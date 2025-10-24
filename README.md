@@ -10,7 +10,7 @@ Ces éléments permettent de mieux comprendre la structure du système et les in
 
 ## 🏗️ 1. Architecture de l’application
 
-![Page de préchargement](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/38eeb0a541080286c5441299cb2f11c8dbb21868/web%20site1/Page%20de%20pr%C3%A9chargement%20.png)
+![Architecture de l’application](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
 
 Lorsqu’on développe une application, il est essentiel d’organiser son architecture en couches distinctes afin de mieux structurer le code et de garantir une maintenance plus facile.  
 Ce principe, bien qu’antérieur à la programmation orientée objet, reste une référence dans la conception des applications modernes.
@@ -32,7 +32,7 @@ Dans le cadre de notre projet de gestion de stock, nous avons adopté une **arch
 
 ## 🧱 2. Modèle MVC (Model - View - Controller)
 
-![Page d'accueil](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/b9adb84a1533bc3ef05b0a295c0c41634fd1f92a/web%20site1/Page%20d'accueil%20.jpg)
+![Modèle MVC](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/mvc.webp)
 
 Pour structurer notre application, nous avons adopté le **modèle MVC**, qui permet de séparer les différentes responsabilités du système et d’assurer une meilleure maintenabilité.
 
@@ -57,9 +57,9 @@ Dans notre projet, les contrôleurs **Spring Boot** exposent des **API REST** co
 
 ## 🧩 3. Diagramme de classes (Class Diagram)
 
-![Menu de Navigation](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Menu%20de%20Navigation%20.png)
+![Diagramme de classes](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Menu%20de%20Navigation%20.png)
 
-![Diagramme de classes](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Page%20A%20propos.jpg)
+![Diagramme de classes](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Le%20diagramme%20de%20classes%20(Class%20Diagram)%20.png)
 
 Le **diagramme de classes** représente la structure statique du système en définissant les classes principales (comme les produits, les fournisseurs), leurs attributs et leurs relations.  
 
@@ -80,7 +80,7 @@ Exemples :
 
 ## 🧠 4. Diagramme de cas d’utilisation (Use Case Diagram)
 
-![Page Nos services](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Page%20Nos%20services.jpg)
+![Diagramme de cas d’utilisation](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Le%20diagramme%20de%20cas%20d'utilisation%20(Use%20Case%20Diagram)%20.png)
 
 Ce diagramme illustre les interactions entre les utilisateurs (administrateurs, responsables de stock, fournisseurs) et le système.
 
@@ -106,7 +106,7 @@ Il permet de comprendre comment les messages sont échangés et comment les opé
 
 ### 🔐 1. Diagramme de séquence de l’authentification
 
-![Diagramme de séquence](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Page%20Nos%20r%C3%A9alisations.jpg)
+![Diagramme de séquence](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20s%C3%A9quence%20de%20l'authentification.jpg)
 
 #### Étapes :
 1. **Saisie des identifiants** – L’admin entre ses informations.  
@@ -121,7 +121,7 @@ Il permet de comprendre comment les messages sont échangés et comment les opé
 
 ### 📦 2. Diagramme de Séquence : Création d’une Entrée de Stock
 
-![Création d’une Entrée de Stock](https://github.com/RabiaMAHIR/WebSiteBETOCONCEPT/blob/main/web%20site1/Page%20Nos%20r%C3%A9alisations.jpg)
+![Création d’une Entrée de Stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20S%C3%A9quence.png)
 
 #### Acteurs impliqués :
 - **ADMIN** : saisit les informations d’entrée.  
