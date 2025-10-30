@@ -1,6 +1,6 @@
-# 🧩 Conception et démarche du projet
+#  Conception et démarche du projet
 
-## 📘 Introduction
+##  Introduction
 
 Dans le cadre de notre projet de **gestion de stock**, nous avons conçu une application web complète basée sur une architecture solide et moderne.  
 L’objectif principal de cette section est de présenter les choix techniques et méthodologiques qui ont guidé la conception du projet, notamment l’architecture logicielle, le modèle MVC, ainsi que les principaux diagrammes UML (classes, cas d’utilisation et séquences).  
@@ -8,7 +8,7 @@ Ces éléments permettent de mieux comprendre la structure du système et les in
 
 ---
 
-## 🏗️ 1. Architecture de l’application
+##  1. Architecture de l’application
 
 ![Architecture de l’application](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
 
@@ -30,32 +30,32 @@ Dans le cadre de notre projet de gestion de stock, nous avons adopté une **arch
 
 ---
 
-## 🧱 2. Modèle MVC (Model - View - Controller)
+##  2. Modèle MVC (Model - View - Controller)
 
 ![Modèle MVC](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/mvc.webp)
 
 Pour structurer notre application, nous avons adopté le **modèle MVC**, qui permet de séparer les différentes responsabilités du système et d’assurer une meilleure maintenabilité.
 
-### 🔹 1. Modèle (Model) – Gestion des données
+###  1. Modèle (Model) – Gestion des données
 Le **Modèle** représente la logique métier et l’accès aux données.  
 Dans notre projet, cette couche est implémentée côté **Spring Boot**, où nous avons défini :
 - Les **entités JPA** correspondant aux tables de la base de données (ex : Produit, Fournisseur)  
 - Les **services** qui appliquent la logique métier (ex : mise à jour des stocks)  
 - Les **repositories** qui interagissent avec la base via Spring Data JPA  
 
-### 🔹 2. Vue (View) – Interface utilisateur avec Angular
+###  2. Vue (View) – Interface utilisateur avec Angular
 La **Vue** gère l’affichage et l’interaction avec l’utilisateur.  
 Nous avons utilisé **Angular** pour créer une interface dynamique et réactive :
 - Les composants Angular affichent les données récupérées depuis l’API  
 - Les services Angular (HttpClient) communiquent avec le Back-End Spring Boot  
 
-### 🔹 3. Contrôleur (Controller) – Communication entre Vue et Modèle
+###  3. Contrôleur (Controller) – Communication entre Vue et Modèle
 Le **Contrôleur** joue le rôle d’intermédiaire entre le modèle et la vue.  
 Dans notre projet, les contrôleurs **Spring Boot** exposent des **API REST** consommées par l’application Angular.
 
 ---
 
-## 🧩 3. Diagramme de classes (Class Diagram)
+##  3. Diagramme de classes (Class Diagram)
 
 
 ![Diagramme de classes](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Le%20diagramme%20de%20classes%20(Class%20Diagram)%20.png)
@@ -77,20 +77,20 @@ Exemples :
 
 ---
 
-## 🧠 4. Diagramme de cas d’utilisation (Use Case Diagram)
+##  4. Diagramme de cas d’utilisation (Use Case Diagram)
 
 ![Diagramme de cas d’utilisation](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Le%20diagramme%20de%20cas%20d'utilisation%20(Use%20Case%20Diagram)%20.png)
 
 Ce diagramme illustre les interactions entre les utilisateurs (administrateurs, responsables de stock, fournisseurs) et le système.
 
-### 👤 Acteur principal : Administrateur
+###  Acteur principal : Administrateur
 L’administrateur possède tous les droits pour gérer le système :
 - Ajout et suppression de produits  
 - Gestion des fournisseurs  
 - Affichage de rapports  
 - Téléchargement de données (PDF / Excel)
 
-### ⚙️ Cas d’utilisation principaux :
+###  Cas d’utilisation principaux :
 1. **S’inscrire** – Création d’un compte administrateur  
 2. **Se connecter** – Vérification de l’authentification  
 3. **Visualisation du Dashboard** – Accès aux statistiques et indicateurs clés  
@@ -98,12 +98,12 @@ L’administrateur possède tous les droits pour gérer le système :
 
 ---
 
-## 🔄 5. Diagramme de séquence (Sequence Diagram)
+##  5. Diagramme de séquence (Sequence Diagram)
 
 Le **diagramme de séquence** illustre l’interaction entre les objets du système selon un ordre chronologique.  
 Il permet de comprendre comment les messages sont échangés et comment les opérations sont exécutées étape par étape.
 
-### 🔐 1. Diagramme de séquence de l’authentification
+###  1. Diagramme de séquence de l’authentification
 
 ![Diagramme de séquence](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20s%C3%A9quence%20de%20l'authentification.jpg)
 
@@ -118,7 +118,7 @@ Il permet de comprendre comment les messages sont échangés et comment les opé
 
 ---
 
-### 📦 2. Diagramme de Séquence : Création d’une Entrée de Stock
+###  2. Diagramme de Séquence : Création d’une Entrée de Stock
 
 ![Création d’une Entrée de Stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/Diagramme%20de%20S%C3%A9quence2.png)
 
@@ -145,15 +145,15 @@ Il permet de comprendre comment les messages sont échangés et comment les opé
 
 ✨ *Ce diagramme de séquence joue un rôle fondamental dans notre projet, car il automatise et sécurise la gestion des entrées de stock, garantissant une administration fluide et structurée du système.*
 
-# 🧩 Interfaces Graphiques  
-## 📘 Introduction  
+#  Interfaces Graphiques  
+##  Introduction  
 
 Les interfaces graphiques de notre application de **gestion de stock** ont été conçues pour faciliter la navigation et la gestion des produits de manière intuitive.  
 Chaque page a été pensée pour permettre à l’utilisateur d’ajouter, de modifier ou de supprimer des articles, tout en visualisant l’état du stock en temps réel grâce à une présentation claire et ergonomique.  
 
 ---
 
-## 🏗️ 1. Page de connexion  
+##  1. Page de connexion  
 
 ![Page de connexion](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20connexion.png)
 
@@ -178,7 +178,7 @@ Dans le cadre de notre projet de gestion de stock, nous avons adopté une **arch
 
 ---
 
-## 🏗️ 2. Page de création de compte  
+##  2. Page de création de compte  
 
 ![Page de création de compte]([https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20cr%C3%A9ation%20de%20compte.png))
 
@@ -188,7 +188,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ---
 
-## 🏗️ 3. Menu  
+##  3. Menu  
 
 ![Menu principal](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Menu.png)
 
@@ -202,7 +202,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ---
 
-## 🏗️ 4. Top Bar  
+##  4. Top Bar  
 
 ![Top Bar](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Top%20Bar.png)
 
@@ -213,7 +213,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ---
 
-## 🏗️ 5. Dashboard  
+##  5. Dashboard  
 
 ![Dashboard](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Dashboard.png)
 
@@ -251,7 +251,7 @@ Lorsqu’une année spécifique est sélectionnée, les données sont actualisé
 
 ---
 
-## 🏗️ 6. Page d’ajout d’une sortie de stock  
+##  6. Page d’ajout d’une sortie de stock  
 
 ![Page d’ajout d’une entrée](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/age%20dajout%20dune%20entr%C3%A9e%20de%20stock.png)
 
@@ -296,7 +296,7 @@ Le bouton **New** permet d’ajouter une nouvelle sortie, tandis que **Delete** 
 
 ---
 
-## 🏗️ 7. Page de calcul du coût total  
+##  7. Page de calcul du coût total  
 
 ![Calcul du coût total](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20calcul%20du%20co%C3%BBt%20total.png)
 
