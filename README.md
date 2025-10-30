@@ -155,7 +155,7 @@ Chaque page a été pensée pour permettre à l’utilisateur d’ajouter, de mo
 
 ## 🏗️ 1. Page de connexion  
 
-![Page de connexion](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Page de connexion](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20connexion.png)
 
 Lorsqu’on développe une application, il est essentiel d’organiser son architecture en couches distinctes afin de mieux structurer le code et de garantir une maintenance plus facile.  
 Ce principe, bien qu’antérieur à la programmation orientée objet, reste une référence dans la conception des applications modernes.  
@@ -169,7 +169,7 @@ Dans le cadre de notre projet de gestion de stock, nous avons adopté une **arch
    Lorsque l’utilisateur clique sur "Se Connecter", une requête HTTP POST est envoyée à l’API via Angular.  
    Nous pouvons observer cette requête dans l’onglet *Network* des outils de développement (DevTools).  
 
-![Envoi de la requête de connexion](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Envoi de la requête de connexion](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Envoi%20de%20la%20requ%C3%AAte%20de%20connexion%20%C3%A0%20lAPI.png)
 
 3. **Génération et envoi du JWT à l’utilisateur**  
    Si les identifiants sont valides, le serveur génère un **JWT Token** contenant les informations utilisateur.  
@@ -180,7 +180,7 @@ Dans le cadre de notre projet de gestion de stock, nous avons adopté une **arch
 
 ## 🏗️ 2. Page de création de compte  
 
-![Page de création de compte](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Page de création de compte]([https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20cr%C3%A9ation%20de%20compte.png))
 
 Lorsqu'un utilisateur accède à la page de création de compte, il est invité à remplir plusieurs champs : prénom, nom, email, numéro de téléphone, nom d'utilisateur et mot de passe.  
 Après avoir saisi ces informations, il clique sur le bouton d'inscription pour valider son compte.  
@@ -190,7 +190,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ## 🏗️ 3. Menu  
 
-![Menu principal](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Menu principal](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Menu.png)
 
 - **Dashboard** : Page principale affichant un résumé des statistiques du stock (entrées, sorties, fournisseurs, magasins, etc.).  
 - **Sortie Management** : Gestion des sorties de stock (retrait de produits).  
@@ -204,7 +204,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ## 🏗️ 4. Top Bar  
 
-![Top Bar](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Top Bar](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Top%20Bar.png)
 
 - **Bouton Afficher le menu (MENU)** : Affiche ou masque le menu latéral pour plus d’espace sur la page.  
 - **Bouton Déconnexion (Logout)** : Ferme la session en cours et redirige l’utilisateur vers la page d’accueil.  
@@ -215,7 +215,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
 
 ## 🏗️ 5. Dashboard  
 
-![Dashboard](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Dashboard](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Dashboard.png)
 
 ### 1. Cartes d'affichage principales (Cards)
 - **Total des entrées de stock (ENTRÉE STOCK)**  
@@ -235,7 +235,7 @@ Si toutes les informations sont correctes, il est redirigé vers l’interface p
   Ligne bleue = entrées, ligne rouge = sorties.  
   L’utilisateur peut choisir une année spécifique pour mettre à jour les données.  
 
-![Graphiques](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Graphiques](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Graphiques.png)
 
 - **Graphique à barres (Bar Chart)**  
   Illustre les variations mensuelles des entrées et sorties de stock.  
@@ -253,14 +253,14 @@ Lorsqu’une année spécifique est sélectionnée, les données sont actualisé
 
 ## 🏗️ 6. Page d’ajout d’une sortie de stock  
 
-![Page d’ajout d’une entrée](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Page d’ajout d’une entrée](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/age%20dajout%20dune%20entr%C3%A9e%20de%20stock.png)
 
 ### Saisie des informations de base  
 - **Date d’entrée** : Sélection de la date de sortie du stock.  
 - **Code de l’opération** : Code unique identifiant la sortie.  
 - **Description** : Détails ou remarques supplémentaires.  
 
-![Saisie produit](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Saisie produit](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/D%C3%A9tails%20du%20produit.png)
 
 ### Détails du produit  
 - **Produit** : Sélectionné dans la liste déroulante.  
@@ -270,9 +270,9 @@ Lorsqu’une année spécifique est sélectionnée, les données sont actualisé
 L’utilisateur valide en cliquant sur **Valider**.  
 
 ### Vérification de la sortie dans la liste  
-![Liste des stocks](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Liste des stocks](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/V%C3%A9rification%20de%20l%E2%80%99entr%C3%A9e%20dans%20la%20liste.png)
 
-Après l’enregistrement, l’entrée apparaît dans la liste :  
+Après l’enregistrement, la sortie apparaît dans la liste :  
 - Vérification de l’exactitude des données.  
 - Modification ou suppression possibles.  
 - Bouton **Valider** pour finaliser l’opération.  
@@ -281,7 +281,7 @@ Après l’enregistrement, l’entrée apparaît dans la liste :
 
 ### Liste des sorties de stock  
 
-![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/LA%20liste.png)
 
 Contient les informations suivantes :  
 - Date de sortie  
@@ -290,15 +290,15 @@ Contient les informations suivantes :
 
 L’utilisateur peut rechercher, trier ou exporter la liste (CSV, XLS, PDF).  
 Le bouton **New** permet d’ajouter une nouvelle sortie, tandis que **Delete** supprime les éléments sélectionnés.  
-![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/la%20listePDF.png)
 
-![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/la%20listeXSL.png)
 
 ---
 
 ## 🏗️ 7. Page de calcul du coût total  
 
-![Calcul du coût total](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+![Calcul du coût total](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/inventory_management_1737538393052-master/readme%20Stock/Page%20de%20calcul%20du%20co%C3%BBt%20total.png)
 
 L'utilisateur peut choisir une méthode de calcul dans le menu déroulant.  
 Selon la méthode sélectionnée, le **coût total (totalCost)** est recalculé.  
