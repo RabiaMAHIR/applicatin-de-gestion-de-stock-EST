@@ -251,13 +251,13 @@ Lorsqu’une année spécifique est sélectionnée, les données sont actualisé
 
 ---
 
-## 🏗️ 6. Page d’ajout d’une entrée de stock  
+## 🏗️ 6. Page d’ajout d’une sortie de stock  
 
 ![Page d’ajout d’une entrée](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
 
 ### Saisie des informations de base  
-- **Date d’entrée** : Sélection de la date d’ajout du stock.  
-- **Code de l’opération** : Code unique identifiant l’entrée.  
+- **Date d’entrée** : Sélection de la date de sortie du stock.  
+- **Code de l’opération** : Code unique identifiant la sortie.  
 - **Description** : Détails ou remarques supplémentaires.  
 
 ![Saisie produit](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
@@ -269,7 +269,7 @@ Lorsqu’une année spécifique est sélectionnée, les données sont actualisé
 - **Magasin** : Emplacement de stockage choisi.  
 L’utilisateur valide en cliquant sur **Valider**.  
 
-### Vérification de l’entrée dans la liste  
+### Vérification de la sortie dans la liste  
 ![Liste des stocks](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
 
 Après l’enregistrement, l’entrée apparaît dans la liste :  
@@ -290,6 +290,9 @@ Contient les informations suivantes :
 
 L’utilisateur peut rechercher, trier ou exporter la liste (CSV, XLS, PDF).  
 Le bouton **New** permet d’ajouter une nouvelle sortie, tandis que **Delete** supprime les éléments sélectionnés.  
+![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
+
+![Sorties de stock](https://github.com/RabiaMAHIR/applicatin-de-gestion-de-stock-EST/blob/main/architecture.jpg?raw=true)
 
 ---
 
